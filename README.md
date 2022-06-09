@@ -1,4 +1,4 @@
-# Mock Belt Exam - Data Enrichment
+# SOLUTION - Mock Belt Exam - Data Enrichment
 
 
 - Example Solution File
@@ -621,7 +621,7 @@ financials['funded_amount'] = pd.to_numeric(financials['funded_amount'])
 financials
 ```
 
-    /var/folders/rf/vw4r41jd7vd95x1w0dth7v9h0000gp/T/ipykernel_61654/2638807975.py:2: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
+    /var/folders/rf/vw4r41jd7vd95x1w0dth7v9h0000gp/T/ipykernel_20630/2638807975.py:2: FutureWarning: The default value of regex will change from True to False in a future version. In addition, single character regular expressions will *not* be treated as literal strings when regex=True.
       financials['funded_amount'] = financials['funded_amount'].str.replace('$','')
 
 
@@ -770,9 +770,6 @@ else:
     print('The database already exists.')
 ```
 
-    The database already exists.
-
-
 
 ```python
 ## saving dataframes to database
@@ -781,6 +778,13 @@ use.to_sql('use', engine, index=False, if_exists = 'replace')
 demo.to_sql('demographics', engine, index=False, if_exists = 'replace')
 crowd.to_sql('crowd',engine, index=False, if_exists = 'replace')
 ```
+
+
+
+
+    10000
+
+
 
 
 ```python
@@ -2022,12 +2026,12 @@ print(result.pvalue<.05)
 
 
 ```python
-result = stats.ttest_ind(male_group, female_group)
+result = stats.ttest_ind(male_group, female_group, equal_var=False)
 print(result)
 result.pvalue < .05
 ```
 
-    Ttest_indResult(statistic=4.48964981000983, pvalue=7.216307212906817e-06)
+    Ttest_indResult(statistic=4.5701408946264275, pvalue=5.046604720900298e-06)
 
 
 
