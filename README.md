@@ -2,8 +2,7 @@
 
 
 - Example Solution File
-- 05/03/22
-- James Irving
+
 
 ## Instructions
 
